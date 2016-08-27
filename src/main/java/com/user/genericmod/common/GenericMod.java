@@ -27,7 +27,7 @@ public class GenericMod
 	@Mod.Instance(MODID)
 	public static GenericMod instance;
 
-    public static CommonProxy proxy;
+    public static CommonProxy proxy = new CommonProxy();
 	
 	/** Run before anything else. Read your config, create blocks, items, etc, and register them with the GameRegistry. */
 	@Mod.EventHandler
