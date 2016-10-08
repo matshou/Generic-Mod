@@ -1,25 +1,15 @@
-# eclipse
-bin
-*.launch
-.settings
-.metadata
-.classpath
-.project
+#eclipse
+/bin
+/.settings
+/.classpath
 
-# idea
-out
-*.ipr
-*.iws
-*.iml
-.idea
+#gradle
+/build
+/.gradle
 
-# gradle
-build
-.gradle
-
-# other
-crash-reports
-config
-logs
-eclipse
-run
+#Minecraft
+/logs
+/config
+/saves
+/crash-reports
+options.txt
