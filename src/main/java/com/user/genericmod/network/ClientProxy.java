@@ -20,5 +20,9 @@ public class ClientProxy extends CommonProxy
 		super.preInit(event);
 		
 		String prefix = GenericMod.MODID + ":";
+		
+		ModelLoader.setCustomModelResourceLocation(ModItems.SIMPLE_APPLE, 0, new ModelResourceLocation(ModItems.SIMPLE_APPLE.getRegistryName().toString()));
+		ModelLoader.setCustomModelResourceLocation(ModItems.SIMPLE_APPLE, 1, new ModelResourceLocation(prefix + SimpleApple.AppleType.getTypeNameByMeta(1)));
+		ModelLoader.setCustomModelResourceLocation(ModItems.SIMPLE_APPLE, 2, new ModelResourceLocation(prefix + SimpleApple.AppleType.getTypeNameByMeta(2)));
 	}
 }
