@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -23,6 +24,8 @@ public class GenericMod
 	@Mod.Instance(MODID)
 	public static GenericMod instance;
 
+	@SidedProxy(clientSide = "com.user.genericmod.network.ClientProxy")
+	
     public static CommonProxy proxy = new CommonProxy();
 	
 	/** Run before anything else. Read your config, create blocks, items, etc, and register them with the GameRegistry. */
