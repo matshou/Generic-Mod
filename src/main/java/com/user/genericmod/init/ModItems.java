@@ -12,6 +12,6 @@ public class ModItems
 
 	static
 	{
-		SIMPLE_APPLE = new SimpleApple(4, 0.3F, false);
+		SIMPLE_APPLE = new SimpleApple(4, 0.3F, false);   // created with same values as a vanilla apple
 	}
 }

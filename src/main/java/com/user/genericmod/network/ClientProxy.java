@@ -21,6 +21,18 @@ public class ClientProxy extends CommonProxy
 		
 		String prefix = GenericMod.MODID + ":";
 		
+		/* 
+		 * This is where we register our custom item model files.
+		 * If you do not register the model file for your item, the item will not be properly displayed in-game,
+		 * because Minecraft will have instructions on how to display it.
+		 * 
+		 * The ModelResourceLocation points to a blockstate json file (denoted by the resource domain and file path) and then a variant inside it. 
+		 * The blockstate json now specifies how this variant should be rendered (base model, texture overrides, transformations, etc.).
+		 * 
+         * A special case is added for item models, if the variant is named "inventory" the game will first look into models/item to load 
+         * an item model from there, ignoring any blockstate json.
+		 */
+		
 		ModelLoader.setCustomModelResourceLocation(ModItems.SIMPLE_APPLE, 0, new ModelResourceLocation(ModItems.SIMPLE_APPLE.getRegistryName().toString()));
 		ModelLoader.setCustomModelResourceLocation(ModItems.SIMPLE_APPLE, 1, new ModelResourceLocation(prefix + SimpleApple.AppleType.getTypeNameByMeta(1)));
 		ModelLoader.setCustomModelResourceLocation(ModItems.SIMPLE_APPLE, 2, new ModelResourceLocation(prefix + SimpleApple.AppleType.getTypeNameByMeta(2)));

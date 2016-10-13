@@ -39,7 +39,10 @@ public class SimpleApple extends ItemFood
         subItems.add(new ItemStack(itemIn, 1, 2));     // APPLE_YELLOW
     } 
     
-    
+    /**
+     * This is where we store information about apple subtypes. <br>
+     * Each subtype has a metadata value and a name.
+     */
     public static enum AppleType
     {
     	APPLE_RED(0, "apple_red"),
@@ -55,7 +58,12 @@ public class SimpleApple extends ItemFood
     		typeName = name;
     	}
     	
-    	/** Get apple type name from metadata value. */
+    	/** 
+    	 * Get apple type name from metadata value. <br>
+    	 * 
+    	 * @param meta used to distinguish different item subtypes.  
+    	 * @return name of APPLE_RED if <code>meta</code> was an unregistered value.
+    	 */
     	public static String getTypeNameByMeta(int meta)
     	{
     		for (AppleType type : AppleType.values())
