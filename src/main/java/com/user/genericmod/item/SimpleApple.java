@@ -36,7 +36,7 @@ public class SimpleApple extends ItemFood
     {
     	subItems.add(new ItemStack(itemIn));           // APPLE_RED
         subItems.add(new ItemStack(itemIn, 1, 1));     // APPLE_GREEN
-        subItems.add(new ItemStack(itemIn, 1, 2));     // APPLE_GOLD
+        subItems.add(new ItemStack(itemIn, 1, 2));     // APPLE_YELLOW
     } 
     
     
@@ -44,7 +44,7 @@ public class SimpleApple extends ItemFood
     {
     	APPLE_RED(0, "apple_red"),
     	APPLE_GREEN(1, "apple_green"),
-    	APPLE_GOLD(2, "apple_gold");
+    	APPLE_GOLD(2, "apple_yellow");
     	
     	private final int meta;
     	private final String typeName;
