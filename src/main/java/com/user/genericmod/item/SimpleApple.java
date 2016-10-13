@@ -42,9 +42,9 @@ public class SimpleApple extends ItemFood
     
     public static enum AppleType
     {
-    	APPLE_RED(0, "red_apple"),
-    	APPLE_GREEN(1, "green_apple"),
-    	APPLE_GOLD(2, "gold_apple");
+    	APPLE_RED(0, "apple_red"),
+    	APPLE_GREEN(1, "apple_green"),
+    	APPLE_GOLD(2, "apple_gold");
     	
     	private final int meta;
     	private final String typeName;
