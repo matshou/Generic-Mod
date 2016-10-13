@@ -14,7 +14,7 @@ public class GenericMod
 {
 	public static final String MODID = "genericmod";
 	public static final String NAME = "Generic Mod";
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "0.1.0";
     
     // Use this thing to print in the console:
     public static final Logger logger = LogManager.getLogger(MODID);
