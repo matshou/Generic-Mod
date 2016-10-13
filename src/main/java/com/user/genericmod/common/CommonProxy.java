@@ -24,6 +24,8 @@ public class CommonProxy
 	{
 		GenericMod.logger.info("Preparing to register item and block instances...");
 		
+		registerItem(ModItems.SIMPLE_APPLE, "apple_red");
+		
 		GenericMod.logger.info("Finished registering object instances. ");
 	}
 	

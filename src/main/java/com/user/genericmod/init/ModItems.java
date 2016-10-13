@@ -8,7 +8,10 @@ import com.user.genericmod.item.*;
  */
 public class ModItems 
 {
+	public static final SimpleApple SIMPLE_APPLE;
+
 	static
 	{
+		SIMPLE_APPLE = new SimpleApple(4, 0.3F, false);
 	}
 }
