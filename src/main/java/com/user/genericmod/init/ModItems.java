@@ -9,9 +9,11 @@ import com.user.genericmod.item.*;
 public class ModItems 
 {
 	public static final SimpleApple SIMPLE_APPLE;
+	public static final ColoredFeather COLORED_FEATHER;
 
 	static
 	{
 		SIMPLE_APPLE = new SimpleApple(4, 0.3F, false);   // created with same values as a vanilla apple
+		COLORED_FEATHER = new ColoredFeather();
 	}
 }
