@@ -26,6 +26,17 @@ public class ColoredFeather extends Item
 		this.setHasSubtypes(true);
 	}
 	
+	/**
+     * Returns the unlocalized name of this item. This version accepts an ItemStack so different stacks can have
+     * different names based on their damage or NBT. <p>
+     * 
+     * With the use of this we can have different names for different subtypes without having separate model files.
+     */
+    public String getUnlocalizedName(ItemStack stack)
+    {
+        return "item." + FeatherType.getTypeNameByMeta(stack.getMetadata());
+    }
+	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(Item itemIn, CreativeTabs tab, java.util.List<ItemStack> subItems)
