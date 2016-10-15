@@ -42,7 +42,9 @@ public class ColoredFeather extends Item
 	public static class ColorHandler implements IItemColor 
 	{
 		/** 
-		 * Return a color value you wish the stack be colored with. 
+		 * Return a color value you wish the stack be colored with.<br>
+		 * It will start getting called from loading the world onwards.
+		 * 
 		 * @param tintIndex index of the layer <i>(model file property)</i> to be colored
 		 */
 		@Override
