@@ -3,6 +3,10 @@ All notable changes to this mod project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and uses a custom versioning system.
 
+## Version [0.4.0] - 2016-10-15
+### Added
+- Three new items with custom texture and a shared model file.
+
 ## Version [0.3.0] - 2016-10-13
 ### Added
 - Three new items with custom models and textures.
@@ -20,6 +24,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and uses a
 - Main mod classes.
 - Meta files needed by Eclipse.
 
+[0.4.0]: https://github.com/yooksi/Generic-Mod/compare/368e351523b860a8f44b9eb4683a2f48806c6792...colored_items
 [0.3.0]: https://github.com/yooksi/Generic-Mod/pull/1
 [0.2.0]: https://github.com/yooksi/Generic-Mod/compare/877da9a581a5efc8ca36689bd50367a1fa53e0d3...32755cf0da3b883f662bb8f2134e8aa3a6f02103
 [0.1.0]: https://github.com/yooksi/Generic-Mod/compare/0f5b5f4ea53978cf4aa472c71e9042c8e1117dfc...877da9a581a5efc8ca36689bd50367a1fa53e0d3
