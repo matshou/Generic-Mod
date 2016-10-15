@@ -12,5 +12,10 @@
 /config
 /saves
 /crash-reports
-options.txt
+
+#generics
+/*.json
+/*.txt
+
+#other
 build.gradle
