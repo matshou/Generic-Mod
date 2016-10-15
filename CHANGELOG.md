@@ -3,6 +3,10 @@ All notable changes to this mod project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and uses a custom versioning system.
 
+## Version 0.4.0 - 2016-10-15
+### Added
+- Three new items with custom texture and a shared model file.
+
 ## Version [0.3.0] - 2016-10-13
 ### Added
 - Three new items with custom models and textures.

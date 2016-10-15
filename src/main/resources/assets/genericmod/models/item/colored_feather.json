@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "genericmod:items/colored_feather_top",
+        "layer1": "genericmod:items/colored_feather_base"
+    }
+}
