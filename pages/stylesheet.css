@@ -38,8 +38,11 @@ p.code-block { background-color: white; font-family: Inconsolata, monospace; fon
 p.code-block span.value { color: #990052; }      
 p.code-block span.var { color: Teal; }
 
-.note-header:before {font-family: "Comic Sans", monospace; content: &#39;!&#39;; font-size: 125%; 
-				   padding-right: 1px;}
+.note-header:before {
+font-family: "Comic Sans", monospace; content: "!"; 
+font-size: 125%; 		   
+padding-right: 1px;
+}
 
 .note-header { font-size: 15.5px; font-family: "Roboto Slab", monospace; font-weight: bold; 
 			 background-color: #6ab0de; color: white; border-bottom: none; line-height: 28px; 
