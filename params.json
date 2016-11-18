@@ -1,0 +1,6 @@
+{
+  "name": "Generic-mod",
+  "tagline": "An example project designed to teach you how to create your first Minecraft 1.10 mod.",
+  "body": "# Generic-Mod\r\nAn example project designed to teach you how to create your first Minecraft 1.10 mod.  \r\nIt's intended to be used with this moddding guide: [Getting Started With Minecraft Modding](https://yooksidoesminecraft.blogspot.de/2016/08/getting-started-with-minecraft-modding.html).\r\n\r\nAt the moment this mod only contains a mod framework that should be enough to let your start writing your own code.  \r\n_The reason `build.gradle` is not included in this project is because you are expected to create one as a learning experience._\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
