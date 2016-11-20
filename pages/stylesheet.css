@@ -107,6 +107,14 @@ border: 1px solid #e1e4e5;
 border-top: none; 
 }
 
+.note-important-header {
+background-color: #1abc9c;
+}
+
+.note-important-body {
+background-color: #dbfaf4;
+}
+
 h1 { 
 font-family: "Roboto Slab", Arial, serif;
 font-weight: bold; 
