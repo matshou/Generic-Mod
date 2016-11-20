@@ -1,8 +1,9 @@
+
 body {
 background: #fafafa url(../images/body-bg.jpg) 0 0 repeat;
 }
 
-/** Increase link readibility 
+/** Increase link readability 
 *   http://sixrevisions.com/usability/hyperlink-design/
 */
 a {
@@ -11,6 +12,11 @@ text-decoration: none;
 padding-bottom: 0.4px;
 border-bottom: 1px solid #bcbebf;
 word-spacing: 2px; 
+}
+
+/** Increase bullet point readability */
+li {
+	margin: 7px 0;
 }
 
 .page-frame {
@@ -57,6 +63,7 @@ blockquote {
 font-family: Lora, serif; font-size: 110%;
 font-style: italic;
 letter-spacing: -0.4px;
+line-height: 125%;
 color: #807b7b;
 margin: 40px;
 }
