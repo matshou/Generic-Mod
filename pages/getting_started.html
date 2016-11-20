@@ -9,7 +9,7 @@
     <div class="page-frame">
         <img src="../images/shadow-mark-right.png" style="position: absolute; left: 100%; top: 15%">
         <img src="../images/shadow-mark-left.png" style="position: absolute; right: 100%; bottom: 25%;">
-        <hr />
+        <hr/>
 		<h1>Getting Started with Minecraft Modding</h1>
 		<hr/>
         <p>
@@ -27,7 +27,7 @@
             in general.
         </p>
         <h2>Table of Contents</h2>
-        <hr />
+        <hr/>
         <p>
             This guide is divided into the following sections:
         </p>
@@ -44,7 +44,7 @@
             Use the links to easily navigate through the article and bookmark individual sections.
         </div>
         <h3 id="prerequisites">Prerequisites</h3>
-        <hr />
+        <hr/>
         <p>
             Okay, let's get started. Before we can go into writing the actual code you will have to download and install some software. Here is a list of prerequisites with descriptions and download links:
         </p>
@@ -69,7 +69,7 @@
             Start Menu for ease of access, however you don't have to do this.
         </p>
         <h3 id="setting_up_forge">Setting up Forge</h3>
-        <hr />
+        <hr/>
         <p>
             Now that we have our IDE it's time to set up Forge, so first and foremost it's important to understand what Forge really is. Minecraft Forge is a modding <a href="http://en.wikipedia.org/wiki/API" rel="nofollow" title="API on Wikipedia">API</a> (Application Programming Interface), which makes it easier to create mods, and also make sure mods are compatible with each other. You can imagine it as a bridge between us and Minecraft's source code that helps us interact with it. I'm not going to explain how to do this here, as the best place to find this out is the official Forge documentation. Read their <a href="http://mcforge.readthedocs.io/en/latest/gettingstarted/" target="_blank">Getting Started with Forge</a> page. 
             The instructions are fairly simple and you should be looking at your Forge project in Eclipse in less then few minutes. Once Forge is done installing, move it's folder into the root development folder we created earlier.
@@ -79,7 +79,7 @@
             One of the steps in Forge's documentations tells you to “open up a command prompt in the folder you created”. To do that with ease, right-click that folder while holding shift and select the <code>open command window here</code> context entry.
         </div>
         <h3 id="about_github">About GitHub</h3>
-        <hr />
+        <hr/>
         <p>
             What is GitHub? GitHub is a web-based public hosting service for Git repositories. Now what is Git you might be asking yourselves. Git is the most popular version control system used for software development. Version control System (VCS) is most simply put, management of changes to documents. They are commonly used by word processors (e.g Microsoft Word) and spreadsheet software (e.g. Microsoft Excel) as well as most bigger collaborative projects today.
         </p>
@@ -105,7 +105,7 @@
             For the purpose of this guide I've decided to create a new <b>generic mod</b> (the name was borrowed from an old tutorial mod used in minecraftforge.net tutorials made by Havvy) and hosted it in a <a href="https://github.com/yooksi/Generic-Mod" target="_blank">repository</a> on GitHub. What I want you to do now is visit that repository and clone (create a local copy) it to your computer using GitHub Desktop you installed earlier. I usually keep all my repositories in <code>Documents\GitHub</code>, but you can store yours wherever you want. If you are not sure how to do, that don't worry, you can watch the instructional GIFs linked in the end of the article.
         </p>
         <h3 id="project_dependencies">External Project Dependencies</h3>
-        <hr />
+        <hr/>
         <p>
             One more thing we need to do before we can import the generic mod project in our Eclipse workspace. The following steps will explain how to do an independent mod setup. For this setup we only need Forge for it's two meta files, after that we can freely
             delete it. There are three files that we need to move to your mod root folder. The first file is called <code>.classpath</code>. Eclipse uses this "meta"file to locate all project external dependencies, which are basically all
@@ -130,7 +130,7 @@
             The reason I did not go into explaining what Gradle is and how to fully use it, is because I lack the knowledge to do so. I searched a long time before I could find some relevant information on how pull this setup off. This is the <a href="http://www.minecraftforge.net/forum/index.php/topic,14791.msg75374.html#msg75374">'how-to'</a> article I used to accomplish this.
         </div>
         <h3 id="run_configurations">Run Configurations</h3>
-        <hr />
+        <hr/>
         <p>
             There are two amazing things I didn't know when I just started modding Minecraft. Amazing thing #1: with the use of Gradle we're able to run an instance of a Minecraft client and server directly from Eclipse with both Forge and our mod loaded inside.
             Amazing thing #2: is that we can actually run Minecraft interactively while watching the source code and the variables during the execution. This allows us to write our code 'on the fly' when trying to correct problems. Without debugging,
@@ -151,7 +151,7 @@
             arrow (pointing down) located in the upper right corner of your package explorer, select "Filters..." option and check the "Non-Java elements" checkbox.
         </div>
         <h3 id="conclusion">The Conclusion</h3>
-        <hr />
+        <hr/>
         <p>
             If you followed this article properly you should now be left with a fairly good understanding of how to set up your Minecraft development environment from scratch.
         </p>

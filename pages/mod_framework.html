@@ -9,12 +9,11 @@
     <div class="page-frame">
         <img src="../images/shadow-mark-right.png" style="position: absolute; left: 100%; top: 15%">
         <img src="../images/shadow-mark-left.png" style="position: absolute; right: 100%; bottom: 25%;">
-        <hr />
+        <hr/>
 		<h1>Setting up Your Mod Framework</h1>
 		<hr/
         <p>
-            Before I can teach you how to create cool things like custom items, blocks and mobs, we first need to create a skeletal structure for your first upcoming mod. This kind of structure is commonly refer to as a mod framework. The goal of this structure is
-            to deploy a simple modding environment that will be directly connected with Forge API. This environment should be very generic in it's design and should not reflect the personality of your mod, however I will explain this a bit later.
+            Before I can teach you how to create cool things like custom items, blocks and mobs, we first need to create a skeletal structure for your first upcoming mod. This kind of structure is commonly refer to as a mod framework. The goal of this structure is to deploy a simple modding environment that will be directly connected with Forge API. This environment should be very generic in it's design and should not reflect the personality of your mod, however I will explain this a bit later.
         </p>
         <div class="note-header note-important-header">
             Important</div>
@@ -26,7 +25,7 @@
         <!--We're also going to be interacting with GitHub a lot, so I suggest checking out another article I wrote about learning to work with GitHub: <a href="https://yooksidoesminecraft.blogspot.de/2016/10/learning-to-github-for-minecraft-modders.html">Learning to GitHub: For Minecraft Modders</a>. It will give you a beginners understanding of what GitHub is, how it works and why it's important for us Minecraft modders. Note that this step is optional, but highly recommended.-->
 
         <h2>Structuring Your Mod</h2>
-        <hr />
+        <hr/>
         <p>
             We’ll look at how to organize your mod into different files and what those files should do. This section will be partially based on an official Forge <a href="https://mcforge.readthedocs.io/en/latest/gettingstarted/structuring/" target="_blank">article</a>.
         </p>
@@ -35,7 +34,7 @@
             it's mainly because it's the most popular IDE out there, and most developers already have experience working with it.
         </p>
         <h3>Java Project</h3>
-        <hr />
+        <hr/>
         <p>
             Your first step should be to create a new workspace folder in an easily accessible location, like <code>Libraries\Documents</code>. Name the folder any way you want. This is where Eclipse will store it's metadata files related to Java projects
             created and managed inside that workspace. These files will be hosted in two folders called <code class="black">.metadata</code> and <code class="black">.recommenders</code>, so don't mess around with those folders.
@@ -61,7 +60,7 @@
                 style="padding: 0;" /> create the second source folder. Click finish and your basic structure is now complete.
         </p>
         <h3>Packages</h3>
-        <hr />
+        <hr/>
         <p>
             We're going to be organizing our classes by placing them in packages. In case you don't understand what Java packages are, I strongly recommend reading this short Java <a href="https://docs.oracle.com/javase/tutorial/java/package/index.html"
                 target="_blank">tutorial</a>.
@@ -89,12 +88,12 @@
         We will begin by defining a framework entry point with the @Mod annotation. Any class found with this annotation applied will be loaded as a Mod. The instance that is loaded will represent the mod to other Mods in the system.
         <br />
         <h3>External Links</h3>
-        <hr />
+        <hr/>
         <ul>
             <li><a href="https://en.wikipedia.org/wiki/Software_framework" target="_blank">Software framework on Wikipedia</a></li>
             <li><a href="http://www.programcreek.com/2011/09/how-to-design-a-java-framework/" target="_blank">How to design a Java framework</a></li>
         </ul>
-        <hr />
+        <hr/>
     </div>
 </body>
 </html>
