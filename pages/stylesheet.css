@@ -141,7 +141,9 @@ padding-bottom: 3px;
 }
 
 h1 {
-	font-size: 30px;
+font-size: 30px;
+margin: 15px 0;
+padding: 0;
 }
 
 h2 { 
@@ -160,6 +162,10 @@ height: 1px;
 border: 1px; 
 margin-top: 8px; 
 margin-bottom: 13px; 
+}
+
+hr.top {
+	margin-bottom: 0;
 }
 
 code { 
