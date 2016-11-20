@@ -14,6 +14,10 @@ border-bottom: 1px solid #bcbebf;
 word-spacing: 2px; 
 }
 
+a:visited {
+	color: #551A8B;
+}
+
 /** Increase bullet point readability */
 li {
 	margin: 7px 0;
