@@ -170,8 +170,3 @@ code.UI {
 color: black; 
 background-color: #f0f0f0; 
 }
-
-:root { 
---noteImportantHeader-color: #1abc9c;
---noteImportantBody-color: #dbfaf4;
-}
