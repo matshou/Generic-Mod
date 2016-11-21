@@ -16,11 +16,13 @@ function onScrollEvent()
 function isScrolledIntoView(elem)
 {
 	var docViewTop = document.body.scrollTop,
-	docViewBottom = docViewTop + getBodyHeight(),
+	docViewBottom = docViewTop + getBodyHeight();
 
-	elemTop = elem.offsetTop,
+	var elemTop = elem.offsetTop,
 	elemBottom = elemTop + elem.offsetHeight;
 
+	document.getElementById("counter").innerHTML = elemTop + " " + elemBottom/*parseInt(docViewTop, 10)*/;
+	
 	return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
 }
 

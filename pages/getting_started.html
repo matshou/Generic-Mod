@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Getting Started with Minecraft Modding</title>
-	<script src="scrolling_script.js"></script>
+	<script src="scrolling-script.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Lato|Inconsolata|Lora|Roboto+Slab:700' rel='stylesheet' />
 </head>
@@ -48,7 +48,7 @@
         </p>
         <ul>
             <li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java SE Development Kit (JDK)</a> - Includes the Java Run Environment, plus tools for developing, debugging, and monitoring Java applications.</li>
-            <li><a href="https://eclipse.org/downloads/eclipse-packages/" target="_blank">Eclipse IDE (for Java Developers)</a> - The development environment we will be using in this tutorial. If you're using another IDE, you might have to configure things differently.</li><li><a href="http://files.minecraftforge.net/" target="_blank">Minecraft Forge MDK</a> - Development kit that contains the modding API, Minecraft source code and other resources. Always choose the recommended version.</li>
+            <li><a href="https://eclipse.org/downloads/eclipse-packages/" target="_blank">Eclipse IDE (for Java Developers)</a> - The development environment we will be using in this tutorial. If you're using another IDE, you'll most probably have to configure things differently.</li><li><a href="http://files.minecraftforge.net/" target="_blank">Minecraft Forge MDK</a> - Development kit that contains the modding API, Minecraft source code and other resources. Choose the recommended version.</li>
         </ul>
         <p>
             First off, you should create a new folder where all your mod development files will be located, you can call it something descriptive like "MinecraftModDev". Inside that folder create a subfolder called&nbsp; "Installation Files" and move all the files
@@ -69,7 +69,7 @@
         <h2 id="setting_up_forge">Setting up Forge</h2>
         <hr/>
         <p>
-            Now that we have our IDE it's time to set up Forge, so first and foremost it's important to understand what Forge really is. Minecraft Forge is a modding <a href="http://en.wikipedia.org/wiki/API" rel="nofollow" title="API on Wikipedia">API</a> (Application Programming Interface), which makes it easier to create mods, and also make sure mods are compatible with each other. You can imagine it as a bridge between us and Minecraft's source code that helps us interact with it. I'm not going to explain how to do this here, as the best place to find this out is the official Forge documentation. Read their <a href="http://mcforge.readthedocs.io/en/latest/gettingstarted/" target="_blank">Getting Started with Forge</a> page. 
+            Now that we have our IDE it's time to set up Forge, so first and foremost it's important to understand what Forge really is. Minecraft Forge is a modding <a href="http://en.wikipedia.org/wiki/API" rel="nofollow" title="API on Wikipedia">API</a> (Application Programming Interface), which makes it easier to create mods, and also make sure mods are compatible with each other. You can imagine it as a bridge between us and Minecraft's source code that helps us interact with it. I'm not going to explain how to do this here, read the official Forge documentation - <a href="http://mcforge.readthedocs.io/en/latest/gettingstarted/" target="_blank">Getting Started with Forge</a>. 
             The instructions are fairly simple and you should be looking at your Forge project in Eclipse in less then few minutes. Once Forge is done installing, move it's folder into the root development folder we created earlier.
         </p>
         <div class="note-header">Hint</div>
@@ -97,7 +97,7 @@
             Although it's not strictly necessary to set up your project in an online repository on GitHub, I would strongly recommend it. It's a great way to make your development effort more organized and efficient, and I've already mentioned the collaborative element in all this. It might be important to add that most other Minecraft mod developers use GitHub as well, which makes working there that more interesting for us.
         </p>
         <p>
-            To set up your project in a repository, visit GitHub and create a free your account. Next thing you have to do is download and install a Git GUI client. The most simple and user-friendly client I know of is <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> (for Windows 7 or later) so I would recommend going with that. If you're interested in something more advanced you can take a look at this official <a href="https://git-scm.com/download/gui/linux" target="_blank">GUI client list</a>.
+            To set up your project in a repository, visit GitHub and create a free your account. Next thing you have to do is download and install a Git GUI client. The most simple and user-friendly client I know of is <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> (for Windows 7 or later) so I would recommend going with that. If you're interested in something more advanced you can take a look at the official GUI client list linked in the last section of the article.
         </p>
         <p>
             For the purpose of this guide I've decided to create a new <b>generic mod</b> (the name was borrowed from an old tutorial mod used in minecraftforge.net tutorials made by Havvy) and hosted it in a <a href="https://github.com/yooksi/Generic-Mod" target="_blank">repository</a> on GitHub. What I want you to do now is visit that repository and clone (create a local copy) it to your computer using GitHub Desktop you installed earlier. I usually keep all my repositories in <code>Documents\GitHub</code>, but you can store yours wherever you want. If you are not sure how to do, that don't worry, you can watch the instructional GIFs linked in the end of the article.
