@@ -49,7 +49,7 @@ hyphens: auto;
 .table-of-contents
 {
 position: initial;
-top: 34px;
+top: 16px;
 transform: translateX(+378%); 
 color: #807b7b;
 font-size: 14px;
@@ -58,7 +58,7 @@ font-size: 14px;
 .toc-absolute
 {
 position: absolute;
-top: 111px;
+top: 107px;
 }
 
 .toc-fixed
@@ -69,7 +69,7 @@ position: fixed;
 .table-of-contents  li {
 list-style-type: none;
 list-style-position: outside;
-line-height: 24px;
+line-height: 30.6px;
 }
 
 .table-of-contents a  {
@@ -205,7 +205,8 @@ margin-bottom: 13px;
 }
 
 hr.top {
-	margin-bottom: 0;
+margin-top: 4px;
+margin-bottom: 0;
 }
 
 code { 
