@@ -20,7 +20,7 @@ li {
 margin: 1.8% 0;
 }
 
-.page-frame {
+#page-frame {
 position: relative;
 right: 100px;
 width: 680px;
@@ -30,7 +30,7 @@ font-family: Lato, Arial, sans-serif;
 font-size: 18px;
 }
 
-.page-frame p {
+#page-frame p {
 line-height: 140%;
 margin: 20px 0;
 
@@ -42,7 +42,7 @@ hyphens: auto;
 -ms-hyphens: auto;
 }
 
-.page-frame ul {
+#page-frame ul {
 	margin: 27px 0;
 }
 
