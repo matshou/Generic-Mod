@@ -1,18 +1,30 @@
-/* Should be called whenever the reader scrolls the page. */
+
+/* Called by body 'onload' event */
+function init()
+{
+	onScrollEvent();  // Page could be loaded scrolled down
+}
+
+/* Should be called whenever the reader scrolls the page */
 function onScrollEvent() 
 {
-	if (! isScrolledIntoView(document.getElementById("anchor")))
+	var title = document.getElementById("anchor"),
+		toc = document.getElementById("table-of-contents");
+
+	if (!isScrolledIntoView(title))
 	{
-		// anchor div isn't visible in view so apply new style to follow div to follow on scroll
-		document.getElementById("contents").className = "table-of-contents toc-fixed";
+		toc.removeAttribute("style");
+	    toc.className = "fixed";
+		moveElementToSidebar("table-of-contents", true);
 	}
 	else
 	{
-		// anchor div is visible in view so apply default style back to follow div to place in default position
-		document.getElementById("contents").className = "table-of-contents toc-absolute";
+		toc.removeAttribute("class");
+		toc.style.position = "absolute";
+		moveElementToSidebar("table-of-contents", false);
 	}
 }
-/*  Is the document element visible to the reader, based on current page position via scrolling. */
+/*  Is the document element visible to the reader, based on current page position via scrolling */
 function isScrolledIntoView(elem)
 {
 	var docViewTop = document.body.scrollTop,
@@ -20,13 +32,11 @@ function isScrolledIntoView(elem)
 
 	var elemTop = elem.offsetTop,
 	elemBottom = elemTop + elem.offsetHeight;
-
-	document.getElementById("counter").innerHTML = elemTop + " " + elemBottom/*parseInt(docViewTop, 10)*/;
 	
 	return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
 }
 
-/*  Find correct height of the document for any browser.
+/*  Find correct height of the document for any browser
  *  http://stackoverflow.com/a/1147768/5759072 
  */
 function getBodyHeight()
@@ -35,4 +45,16 @@ function getBodyHeight()
 	html = document.documentElement;
 
 	return Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+}
+
+/* Fixed elements need to be dynamically moved compared to page-frame width */
+function moveElementToSidebar(id, fixed)
+{
+	var element = document.getElementById(id),
+	page = document.getElementById("page-frame");
+	
+	if (fixed == true)
+		element.style.left = page.offsetWidth + page.offsetLeft;
+	
+	else element.style.left = page.offsetWidth;
 }

@@ -18,6 +18,9 @@ word-spacing: 2px;
 /** Increase bullet point readability */
 li {
 margin: 1.8% 0;
+/* Give children with absolute position a reference point */
+#anchor {
+position: relative;
 }
 
 #page-frame {
@@ -43,36 +46,31 @@ hyphens: auto;
 }
 
 #page-frame ul {
-	margin: 27px 0;
+margin: 27px 0;
 }
 
-.table-of-contents
-{
-position: initial;
-top: 16px;
-transform: translateX(+378%); 
-color: #807b7b;
-font-size: 14px;
-}
-
-.toc-absolute
+#table-of-contents
 {
 position: absolute;
-top: 107px;
 }
 
-.toc-fixed
-{
+#table-of-contents.fixed {
 position: fixed;
+top: 0;
 }
 
-.table-of-contents  li {
+#table-of-contents ul {
+margin: 0;
+margin-top: 19px;
+}
+
+#table-of-contents  li {
 list-style-type: none;
 list-style-position: outside;
 line-height: 30.6px;
 }
 
-.table-of-contents a  {
+#table-of-contents a  {
 border-bottom: none;
 word-spacing: 0;
 font-size: 16px;
