@@ -8,6 +8,7 @@ background: #fffff;
 */
 a {
 color: #4183C4; /*#2A5DB0*/
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 text-decoration: none;
 padding-bottom: 0.4px;
 border-bottom: 1px solid #bcbebf;
@@ -74,7 +75,6 @@ line-height: 24px;
 .table-of-contents a  {
 border-bottom: none;
 word-spacing: 0;
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 16px;
 }
 
