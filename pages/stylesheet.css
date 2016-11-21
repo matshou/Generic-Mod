@@ -18,9 +18,11 @@ word-spacing: 2px;
 /** Increase bullet point readability */
 li {
 margin: 1.8% 0;
-/* Give children with absolute position a reference point */
-#anchor {
-position: relative;
+#main-title {
+position: relative;    /* Give absolute children a reference point */
+padding: 7px 0;
+margin-bottom: 28px;
+border-bottom: solid 1px #e1e4e5;
 }
 
 #page-frame {

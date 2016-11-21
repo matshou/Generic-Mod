@@ -8,20 +8,20 @@ function init()
 /* Should be called whenever the reader scrolls the page */
 function onScrollEvent() 
 {
-	var title = document.getElementById("anchor"),
-		toc = document.getElementById("table-of-contents");
+	var mainTitle = document.getElementById("main-title");
+	var	toc = document.getElementById("table-of-contents");
 
-	if (!isScrolledIntoView(title))
+	if (!isScrolledIntoView(mainTitle))
 	{
 		toc.removeAttribute("style");
 	    toc.className = "fixed";
-		moveElementToSidebar("table-of-contents", true);
+		moveElementToSidebar("table-of-contents", mainTitle, true);
 	}
 	else
 	{
 		toc.removeAttribute("class");
 		toc.style.position = "absolute";
-		moveElementToSidebar("table-of-contents", false);
+		moveElementToSidebar("table-of-contents", mainTitle, false);
 	}
 }
 /*  Is the document element visible to the reader, based on current page position via scrolling */
@@ -47,8 +47,8 @@ function getBodyHeight()
 	return Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
 }
 
-/* Fixed elements need to be dynamically moved compared to page-frame width */
-function moveElementToSidebar(id, fixed)
+/* Fixed elements need to be dynamically moved compared to page-frame and main-title size */
+function moveElementToSidebar(id, mainTitle, fixed)
 {
 	var element = document.getElementById(id),
 	page = document.getElementById("page-frame");
