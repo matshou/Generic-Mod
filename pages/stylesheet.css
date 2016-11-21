@@ -40,6 +40,9 @@ hyphens: auto;
 -moz-hyphens: auto;
 -ms-hyphens: auto;
 }
+
+.page-frame ul {
+	margin: 27px 0;
 }
 
 .table-of-contents
