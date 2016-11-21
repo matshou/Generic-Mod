@@ -42,6 +42,18 @@ transform: translateX(+378%);
 color: #807b7b;
 font-size: 14px;
 }
+
+.toc-absolute
+{
+position: absolute;
+top: 111px;
+}
+
+.toc-fixed
+{
+position: fixed;
+}
+
 .table-of-contents  li {
 list-style-type: none;
 list-style-position: outside;
