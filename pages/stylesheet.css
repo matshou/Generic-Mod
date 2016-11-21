@@ -32,6 +32,13 @@ text-align: justify;
 
 .page-frame p {
 line-height: 140%;
+text-align: justify;
+hyphens: auto;
+-webkit-hyphens: auto;
+-moz-hyphens: auto;
+-ms-hyphens: auto;
+
+}
 }
 
 .table-of-contents
