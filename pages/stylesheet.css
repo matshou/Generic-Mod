@@ -31,12 +31,14 @@ text-align: justify;
 
 .page-frame p {
 line-height: 140%;
+margin: 20px 0;
+
 text-align: justify;
 hyphens: auto;
+
 -webkit-hyphens: auto;
 -moz-hyphens: auto;
 -ms-hyphens: auto;
-
 }
 }
 
