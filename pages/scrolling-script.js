@@ -1,7 +1,12 @@
 
+var activeHeading = null;
+
 /* Called by body 'onload' event */
 function init()
 {
+	activeHeading = getTableOfContentsList()[0];
+	activeHeading.className = "active";
+	
 	onScrollEvent();  // Page could be loaded scrolled down
 	
 	// Use counter for debugging
@@ -9,12 +14,6 @@ function init()
 }
 
 function onResizeEvent()
-{
-	onScrollEvent();  // Maintain correctly scaled position on resize
-}
-
-/* Should be called whenever the reader scrolls the page */
-function onScrollEvent() 
 {
 	onScrollEvent();  // Maintain correctly scaled position on resize
 }
@@ -27,6 +26,31 @@ function onScrollEvent()
 	{
 		var mainTitle = document.getElementById("main-title");
 		moveElementToSidebar("table-of-contents", mainTitle, !isScrolledIntoView(mainTitle));
+	}
+	
+	var frame = document.getElementById("page-frame"),
+		contents = getTableOfContentsList();
+	
+	/* 
+	 *  Iterate through every TOC list element and figure out 
+	 *	if it qualifies to be an active heading. 
+	 */
+	var lastActive = null;
+	for (i = 0; i < contents.length; i++)
+	{	
+		var heading = document.getElementById(String(contents[i].getAttribute("href")).slice(1)),
+			margin = parseInt(window.getComputedStyle(heading).getPropertyValue("margin-top"), 10);
+		
+		if (getDistanceFromDocument(heading).y - margin <= 0)
+			lastActive = contents[i];
+	}
+	
+	/* Change active heading only if it actually should be changed */
+	if (lastActive != null && lastActive != activeHeading)
+	{
+		activeHeading.removeAttribute("class");
+		activeHeading = lastActive;
+		activeHeading.className = "active";
 	}
 }
 /*  Is the document element visible to the reader, based on current page position via scrolling */
@@ -50,6 +74,27 @@ function getBodyHeight()
 	html = document.documentElement;
 
 	return Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+}
+
+/* Function borrowed from an answer in an StackOverflow thread:
+ * http://stackoverflow.com/a/24829409/5759072
+ */
+function getDistanceFromDocument(element) 
+{
+    var xPosition = 0, yPosition = 0;
+    while(element) 
+	{
+        xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+        element = element.offsetParent;
+    }
+
+    return { x: xPosition, y: yPosition };
+}
+
+function getTableOfContentsList()
+{
+	return document.getElementById("table-of-contents").getElementsByTagName("a");
 }
 
 /* Fixed elements need to be dynamically moved compared to page-frame and main-title size */
