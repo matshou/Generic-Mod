@@ -138,7 +138,7 @@ line-height: 0;
 p.code-block { 
 font-family: Inconsolata, monospace; 
 font-size: 12pt;
-border-style: solid 1px #e1e4e5;
+border: solid 1px #e1e4e5;
 padding: 10px 0 10px 15px;
 margin: 25px 0;
 }
