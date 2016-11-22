@@ -1,11 +1,10 @@
 
 body {
 background: #fffff;
-margin-top: 0px;
 }
 
 /* Increase link readability 
-*   http://sixrevisions.com/usability/hyperlink-design/
+** http://sixrevisions.com/usability/hyperlink-design/ 
 */
 a {
 color: #4183C4; /*#2A5DB0*/
@@ -22,20 +21,11 @@ line-height: 26px;
 margin: 2% 0;
 }
 
-#main-title {
-padding: 10px 0;
-margin-bottom: 28px;
-border-bottom: solid 1px #e1e4e5;
-}
-
 #page-frame {
 position: relative;
-right: 100px;
-width: 680px;
-padding: 16px;
+width: 930px;
 margin: 0 auto;
-font-family: Lato, Arial, sans-serif;
-font-size: 18px;
+margin-top: 50px;
 }
 
 #page-frame p {
@@ -54,15 +44,32 @@ hyphens: auto;
 margin: 27px 0;
 }
 
-#table-of-contents
-{
-width: 300px;
-position: absolute;
-font-size: 12px;
+#sidebar-right {
+position: relative;
+float: right;
+height: inherit;
+width: 250px;
+}
+
+#main-page {
+width: 680px;
+font-family: Lato, Arial, sans-serif;
+font-size: 18px;
+}
+
+#main-title {
+width: 680px;
+padding-bottom: 10px;
+border-bottom: solid 1px #e1e4e5;
+}
+
+#table-of-contents {
+width: inherit;
+position: sticky;
 }
 
 #table-of-contents ul {
-padding-top: 28px;
+text-align: left;
 margin: 0;
 }
 

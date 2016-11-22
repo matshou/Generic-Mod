@@ -11,7 +11,7 @@ function onScrollEvent()
 	var mainTitle = document.getElementById("main-title");
 	var	toc = document.getElementById("table-of-contents");
 	
-	moveElementToSidebar("table-of-contents", mainTitle, !isScrolledIntoView(mainTitle));
+	//moveElementToSidebar("table-of-contents", mainTitle, !isScrolledIntoView(mainTitle));
 }
 /*  Is the document element visible to the reader, based on current page position via scrolling */
 function isScrolledIntoView(elem)
