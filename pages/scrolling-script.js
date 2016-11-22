@@ -10,19 +10,8 @@ function onScrollEvent()
 {
 	var mainTitle = document.getElementById("main-title");
 	var	toc = document.getElementById("table-of-contents");
-
-	if (!isScrolledIntoView(mainTitle))
-	{
-		toc.removeAttribute("style");
-	    toc.className = "fixed";
-		moveElementToSidebar("table-of-contents", mainTitle, true);
-	}
-	else
-	{
-		toc.removeAttribute("class");
-		toc.style.position = "absolute";
-		moveElementToSidebar("table-of-contents", mainTitle, false);
-	}
+	
+	moveElementToSidebar("table-of-contents", mainTitle, !isScrolledIntoView(mainTitle));
 }
 /*  Is the document element visible to the reader, based on current page position via scrolling */
 function isScrolledIntoView(elem)
@@ -51,12 +40,24 @@ function getBodyHeight()
 function moveElementToSidebar(id, mainTitle, fixed)
 {
 	var element = document.getElementById(id),
-	page = document.getElementById("page-frame");
-	
-	if (fixed == true)
-		element.style.left = page.offsetWidth + page.offsetLeft;
-	
-	else element.style.left = page.offsetWidth;
+		page = document.getElementById("page-frame");
+		
 	// Use counter for debugging
 	//document.getElementById("debug-counter").innerHTML = ...;
+		
+	if (fixed == true)
+	{
+		element.style.top = "0";
+		element.style.left = page.offsetWidth + page.offsetLeft - 0.5 ;
+		element.style.position = "fixed";
+	}
+	else 
+	{
+		var style = window.getComputedStyle(mainTitle),
+			margin = style.getPropertyValue("margin-bottom");
+		
+		element.style.top = mainTitle.offsetHeight + mainTitle.offsetTop;
+		element.style.left = page.offsetWidth;
+		element.style.position = "absolute";
+	}
 }

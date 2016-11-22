@@ -32,7 +32,7 @@ border-bottom: solid 1px #e1e4e5;
 position: relative;
 right: 100px;
 width: 680px;
-padding: 30px;
+padding: 16px;
 margin: 0 auto;
 font-family: Lato, Arial, sans-serif;
 font-size: 18px;
@@ -56,17 +56,14 @@ margin: 27px 0;
 
 #table-of-contents
 {
+width: 300px;
 position: absolute;
-}
-
-#table-of-contents.fixed {
-position: fixed;
-top: 0;
+font-size: 12px;
 }
 
 #table-of-contents ul {
+padding-top: 28px;
 margin: 0;
-margin-top: 19px;
 }
 
 #table-of-contents  li {
