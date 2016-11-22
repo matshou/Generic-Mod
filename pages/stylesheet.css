@@ -1,8 +1,4 @@
 
-body {
-background: #fffff;
-}
-
 /* Increase link readability 
 ** http://sixrevisions.com/usability/hyperlink-design/ 
 */
@@ -39,6 +35,7 @@ margin: 27px 0;
 }
 
 #sidebar-right {
+/* Will only be applied if supported */
 position: sticky;
 top: 45px;
 margin: 0 auto;
@@ -61,11 +58,6 @@ margin: 2% 0;
 width: 720px;
 padding-bottom: 10px;
 border-bottom: solid 1px #e1e4e5;
-}
-
-#table-of-contents {
-/* Will only be applied if supported */
-position: sticky;
 }
 
 #table-of-contents ul {
@@ -98,14 +90,13 @@ text-align: center; font-size: 80%; padding-top: 10px;
 .image-frame img {
 display: block;
 margin: auto;
-padding: auto;
 }
 
 img.icon {
-width: 16px;
-height: 16px;
 position: relative;
 top: 3px;
+width: 16px;
+height: 16px;
 }
 
 blockquote {

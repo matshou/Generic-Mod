@@ -3,6 +3,9 @@
 function init()
 {
 	onScrollEvent();  // Page could be loaded scrolled down
+	
+	// Use counter for debugging
+	//document.getElementById("debug-counter").innerHTML = ...;
 }
 
 function onResizeEvent()
@@ -22,7 +25,6 @@ function onScrollEvent()
 	/* In case the browser doesn't support sticky positioning */
 	if (!Modernizr.csspositionsticky)
 	{
-		document.getElementById("debug-counter").innerHTML = "Chrome";
 		var mainTitle = document.getElementById("main-title");
 		moveElementToSidebar("table-of-contents", mainTitle, !isScrolledIntoView(mainTitle));
 	}
@@ -54,9 +56,6 @@ function getBodyHeight()
 function moveElementToSidebar(id, mainTitle, fixed)
 {
 	var element = document.getElementById(id),
-		
-	// Use counter for debugging
-	//document.getElementById("debug-counter").innerHTML = ...;
 		frame = document.getElementById("page-frame"),
 		page = document.getElementById("main-page");
 		
