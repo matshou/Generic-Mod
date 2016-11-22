@@ -60,6 +60,12 @@ padding-bottom: 10px;
 border-bottom: solid 1px #e1e4e5;
 }
 
+/* Apply only when browser doesn't support sticky positioning */
+#table-of-contents.fixed {			
+position: fixed;
+top: 80.5px;
+}
+
 #table-of-contents ul {
 width: 180px;
 text-align: left;
@@ -90,11 +96,14 @@ margin-top: 0;
 }
 
 .image-frame {
-margin: 25px auto; width: auto;
+margin: 25px auto; 
+width: auto;
 }
 
 .image-frame p {
-text-align: center; font-size: 80%; padding-top: 10px;
+text-align: center; 
+font-size: 80%; 
+padding-top: 10px;
 }
 
 .image-frame img {
@@ -127,14 +136,11 @@ line-height: 0;
 }
 
 p.code-block { 
-background-color: white; 
 font-family: Inconsolata, monospace; 
 font-size: 12pt;
-border-style: solid; 
-border-color: #e1e4e5; 
-border-width: 1px; 
-margin: 25px 0;
+border-style: solid 1px #e1e4e5;
 padding: 10px 0 10px 15px;
+margin: 25px 0;
 }
 
 p.code-block span.value { 

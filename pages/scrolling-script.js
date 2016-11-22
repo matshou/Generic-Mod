@@ -65,6 +65,25 @@ function isScrolledIntoView(elem)
 	return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
 }
 
+/* Fixed elements need to be dynamically moved compared to page-frame and main-title size */
+function moveElementToSidebar(id, mainTitle, fixed)
+{
+	var element = document.getElementById(id),
+		frame = document.getElementById("page-frame"),
+		page = document.getElementById("main-page");
+		
+	if (fixed == true)
+	{	
+		var frameEndLeft = frame.offsetLeft + frame.offsetWidth;
+		element.style.left = frameEndLeft - element.offsetWidth;
+        element.className = "fixed";
+	}
+	else 
+	{
+		element.style.position = "static";
+	}
+}
+
 /*  Find correct height of the document for any browser
  *  http://stackoverflow.com/a/1147768/5759072 
  */
@@ -92,28 +111,8 @@ function getDistanceFromDocument(element)
     return { x: xPosition, y: yPosition };
 }
 
+/* Get ONLY link list entries from TOC in sidebar */
 function getTableOfContentsList()
 {
 	return document.getElementById("table-of-contents").getElementsByTagName("a");
-}
-
-/* Fixed elements need to be dynamically moved compared to page-frame and main-title size */
-function moveElementToSidebar(id, mainTitle, fixed)
-{
-	var element = document.getElementById(id),
-		frame = document.getElementById("page-frame"),
-		page = document.getElementById("main-page");
-		
-	if (fixed == true)
-	{	
-		var frameEndLeft = frame.offsetLeft + frame.offsetWidth;
-		element.style.left = frameEndLeft - element.offsetWidth;
-		
-		element.style.top = "80.5px";
-		element.style.position = "fixed";
-	}
-	else 
-	{
-		element.style.position = "static";
-	}
 }
