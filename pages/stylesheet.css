@@ -150,35 +150,33 @@ p.code-block span.var {
 color: Teal; 
 }
 
-.note-header:before  {
-font-family: "Comic Sans", monospace; content: "!";
-font-size: 125%;
-padding-right: 1px;
+.note {
+text-align: justify;
+font-size: 15.5px;
+border: 1px solid #e1e4e5; 
+margin: 25px 0;
 }
 
-.note-header { 
+.note .header { 
 background-color: #6ab0de; 
-color: #ffffff; 
+color: #ffffff;
 font-family: "Roboto Slab", monospace;
-font-size: 15.5px;
 font-weight: bold;
+font-size: 110%;
 letter-spacing: 1.5px;
 line-height: 28px;
-border-bottom: none; 
-margin-top: 25px; 
-margin-bottom: 0; 
-padding: 0 20px;
-border: 1px solid #e1e4e5; 
+padding: 2px 20px;
 }
 
-.note-body { 
-background-color: #e7f2fa; 
-font-size: 90%; 
-padding: 15px 20px; 
-margin-top: 0; 
-margin-bottom: 25px; 						   
-border: 1px solid #e1e4e5; 
-border-top: none; 
+.note .header:before  {
+font-family: "Comic Sans", monospace; content: "!";
+font-size: 130%;
+padding-right: 4px;
+}
+
+.note .content { 
+background-color: #e7f2fa;
+padding: 15px 20px;  
 }
 
 .note-important-header {
