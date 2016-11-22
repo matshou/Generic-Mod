@@ -54,24 +54,22 @@ function getBodyHeight()
 function moveElementToSidebar(id, mainTitle, fixed)
 {
 	var element = document.getElementById(id),
-		page = document.getElementById("page-frame");
 		
 	// Use counter for debugging
 	//document.getElementById("debug-counter").innerHTML = ...;
+		frame = document.getElementById("page-frame"),
+		page = document.getElementById("main-page");
 		
 	if (fixed == true)
-	{
-		element.style.top = "0";
-		element.style.left = page.offsetWidth + page.offsetLeft - 0.5 ;
+	{	
+		var frameEndLeft = frame.offsetLeft + frame.offsetWidth;
+		element.style.left = frameEndLeft - element.offsetWidth;
+		
+		element.style.top = "80.5px";
 		element.style.position = "fixed";
 	}
 	else 
 	{
-		var style = window.getComputedStyle(mainTitle),
-			margin = style.getPropertyValue("margin-bottom");
-		
-		element.style.top = mainTitle.offsetHeight + mainTitle.offsetTop;
-		element.style.left = page.offsetWidth;
-		element.style.position = "absolute";
+		element.style.position = "static";
 	}
 }
