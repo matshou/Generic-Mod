@@ -64,6 +64,7 @@ border-bottom: solid 1px #e1e4e5;
 }
 
 #table-of-contents {
+/* Will only be applied if supported */
 position: sticky;
 }
 

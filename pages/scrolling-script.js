@@ -13,10 +13,19 @@ function onResizeEvent()
 /* Should be called whenever the reader scrolls the page */
 function onScrollEvent() 
 {
-	var mainTitle = document.getElementById("main-title");
-	var	toc = document.getElementById("table-of-contents");
-	
-	//moveElementToSidebar("table-of-contents", mainTitle, !isScrolledIntoView(mainTitle));
+	onScrollEvent();  // Maintain correctly scaled position on resize
+}
+
+/* Should be called whenever the reader scrolls or resizes the page */
+function onScrollEvent()
+{
+	/* In case the browser doesn't support sticky positioning */
+	if (!Modernizr.csspositionsticky)
+	{
+		document.getElementById("debug-counter").innerHTML = "Chrome";
+		var mainTitle = document.getElementById("main-title");
+		moveElementToSidebar("table-of-contents", mainTitle, !isScrolledIntoView(mainTitle));
+	}
 }
 /*  Is the document element visible to the reader, based on current page position via scrolling */
 function isScrolledIntoView(elem)
