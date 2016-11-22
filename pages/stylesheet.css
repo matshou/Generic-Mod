@@ -1,69 +1,88 @@
 
 body {
-background: #fafafa url(../images/body-bg.png) 0 0 repeat;
+background: #fffff;
 }
 
-/** Increase link readability 
-*   http://sixrevisions.com/usability/hyperlink-design/
+/* Increase link readability 
+** http://sixrevisions.com/usability/hyperlink-design/ 
 */
 a {
 color: #4183C4; /*#2A5DB0*/
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 text-decoration: none;
 padding-bottom: 0.4px;
 border-bottom: 1px solid #bcbebf;
 word-spacing: 2px; 
 }
 
-/** Increase bullet point readability */
-li {
-	margin: 7px 0;
+#page-frame {
+position: relative;
+max-width: 1000px;
+margin: 0 auto;
+margin-top: 50px;
 }
 
-.page-frame {
-background: transparent;
-position: absolute;
-left: 20%;
-width: 680px;
-padding: 30px;
-font-family: Lato, Arial, sans-serif;
-font-size: 16px;
-text-align: justify;
-}
-
-.page-frame p {
+#page-frame p {
 line-height: 140%;
+margin: 20px 0;
+
+text-align: justify;
+hyphens: auto;
+
+-webkit-hyphens: auto;
+-moz-hyphens: auto;
+-ms-hyphens: auto;
 }
 
-.table-of-contents
-{
-position: initial;
-top: 34px;
-transform: translateX(+378%); 
-color: #807b7b;
-font-size: 14px;
+#page-frame ul {
+margin: 27px 0;
 }
 
-.toc-absolute
-{
-position: absolute;
-top: 111px;
+#sidebar-right {
+position: sticky;
+top: 45px;
+margin: 0 auto;
+float: right;
 }
 
-.toc-fixed
-{
-position: fixed;
+#main-page {
+font-family: Lato, Arial, sans-serif;
+width: 720px;
+font-size: 18px;
 }
 
-.table-of-contents  li {
+/* Increase bullet point readability */
+#main-page li {
+line-height: 26px;
+margin: 2% 0;
+}
+
+#main-title {
+width: 720px;
+padding-bottom: 10px;
+border-bottom: solid 1px #e1e4e5;
+}
+
+#table-of-contents {
+position: sticky;
+}
+
+#table-of-contents ul {
+text-align: left;
+margin: 0;
+padding: 0;
+}
+
+#table-of-contents  li {
 list-style-type: none;
 list-style-position: outside;
 line-height: 24px;
+padding: 5px 0;
 }
 
-.table-of-contents a  {
+#table-of-contents a  {
 border-bottom: none;
 word-spacing: 0;
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 16px;
 }
 
@@ -170,7 +189,7 @@ padding-bottom: 3px;
 }
 
 h1 {
-font-size: 30px;
+font-size: 35px;
 margin: 15px 0;
 padding: 0;
 }
@@ -191,10 +210,6 @@ height: 1px;
 border: 1px; 
 margin-top: 8px; 
 margin-bottom: 13px; 
-}
-
-hr.top {
-	margin-bottom: 0;
 }
 
 code { 
