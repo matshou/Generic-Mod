@@ -15,15 +15,9 @@ border-bottom: 1px solid #bcbebf;
 word-spacing: 2px; 
 }
 
-/* Increase bullet point readability */
-li {
-line-height: 26px;
-margin: 2% 0;
-}
-
 #page-frame {
 position: relative;
-width: 930px;
+max-width: 1000px;
 margin: 0 auto;
 margin-top: 50px;
 }
@@ -52,31 +46,38 @@ width: 250px;
 }
 
 #main-page {
-width: 680px;
 font-family: Lato, Arial, sans-serif;
+width: 720px;
 font-size: 18px;
 }
 
+/* Increase bullet point readability */
+#main-page li {
+line-height: 26px;
+margin: 2% 0;
+}
+
 #main-title {
-width: 680px;
+width: 720px;
 padding-bottom: 10px;
 border-bottom: solid 1px #e1e4e5;
 }
 
 #table-of-contents {
-width: inherit;
 position: sticky;
 }
 
 #table-of-contents ul {
 text-align: left;
 margin: 0;
+padding: 0;
 }
 
 #table-of-contents  li {
 list-style-type: none;
 list-style-position: outside;
-line-height: 30.6px;
+line-height: 24px;
+padding: 5px 0;
 }
 
 #table-of-contents a  {
