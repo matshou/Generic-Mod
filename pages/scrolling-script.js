@@ -57,4 +57,6 @@ function moveElementToSidebar(id, mainTitle, fixed)
 		element.style.left = page.offsetWidth + page.offsetLeft;
 	
 	else element.style.left = page.offsetWidth;
+	// Use counter for debugging
+	//document.getElementById("debug-counter").innerHTML = ...;
 }
