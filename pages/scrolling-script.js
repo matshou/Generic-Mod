@@ -5,6 +5,11 @@ function init()
 	onScrollEvent();  // Page could be loaded scrolled down
 }
 
+function onResizeEvent()
+{
+	onScrollEvent();  // Maintain correctly scaled position on resize
+}
+
 /* Should be called whenever the reader scrolls the page */
 function onScrollEvent() 
 {
