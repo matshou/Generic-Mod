@@ -1,9 +1,10 @@
 
 body {
 background: #fffff;
+margin-top: 0px;
 }
 
-/** Increase link readability 
+/* Increase link readability 
 *   http://sixrevisions.com/usability/hyperlink-design/
 */
 a {
@@ -15,12 +16,14 @@ border-bottom: 1px solid #bcbebf;
 word-spacing: 2px; 
 }
 
-/** Increase bullet point readability */
+/* Increase bullet point readability */
 li {
-margin: 1.8% 0;
+line-height: 26px;
+margin: 2% 0;
+}
+
 #main-title {
-position: relative;    /* Give absolute children a reference point */
-padding: 7px 0;
+padding: 10px 0;
 margin-bottom: 28px;
 border-bottom: solid 1px #e1e4e5;
 }
@@ -181,7 +184,7 @@ padding-bottom: 3px;
 }
 
 h1 {
-font-size: 30px;
+font-size: 35px;
 margin: 15px 0;
 padding: 0;
 }
@@ -202,11 +205,6 @@ height: 1px;
 border: 1px; 
 margin-top: 8px; 
 margin-bottom: 13px; 
-}
-
-hr.top {
-margin-top: 4px;
-margin-bottom: 0;
 }
 
 code { 
