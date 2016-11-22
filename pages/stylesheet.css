@@ -39,10 +39,10 @@ margin: 27px 0;
 }
 
 #sidebar-right {
-position: relative;
+position: sticky;
+top: 45px;
+margin: 0 auto;
 float: right;
-height: inherit;
-width: 250px;
 }
 
 #main-page {
