@@ -20,9 +20,8 @@ margin-top: 50px;
 
 #page-frame p {
 line-height: 140%;
-margin: 20px 0;
+margin: 30px 0;
 
-text-align: justify;
 hyphens: auto;
 
 -webkit-hyphens: auto;
@@ -226,7 +225,7 @@ padding: 0 4px;
 }
 
 /* Imitates software UI messages */
-code.UI { 
+code.path { 
 color: black; 
 background-color: #f0f0f0; 
 }

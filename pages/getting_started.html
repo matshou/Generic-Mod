@@ -36,7 +36,7 @@
 				Welcome to modding minecraft! We modders have a lot of control over Minecraft, but there's a lot of code and beginning can be overwhelming. But still, creating your own blocks and adding your own functionality to Minecraft is quite a liberating experience! If you don't like a facet of the game, change it! If you want more content, you can add it!
 			</blockquote>
 			<p>
-				This article is a guide or tutorial of some sort that is intent on showing you how to get started developing your first very own Minecraft mod. Once you're done reading this article you should be able to set up your development environment, install Forge, interact with Git repositories, import your mod in Eclipse as an independent project and run your mod directly from Eclipse with relative ease.
+				This article is a thorough, yet comprehensive beginners guide to modding Minecraft. You're going to learn how to get started developing your very own first Minecraft mod. Once you're done reading this article you should be able to set up your development environment, install Forge, interact with Git repositories, import your mod in Eclipse as an independent project and run your mod directly from Eclipse with relative ease.
 			</p>
 			<p>
 				This article was written for <b>version 1.10</b>, however I believe that you will have no problem applying it to other recent versions including 1.8 and 1.9. Also, many of the concepts you'll learn here will be very useful to you for modding
@@ -51,27 +51,24 @@
 			<h2 id="prerequisites">Prerequisites</h2>
 			<hr/>
 			<p>
-				Okay, let's get started. Before we can go into writing the actual code you will have to download and install some software. Here is a list of prerequisites with descriptions and download links:
+				Before you can start writing any code, you will have to download and install some software. Here is a small list of things you're going to need:
 			</p>
 			<ul>
 				<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java SE Development Kit (JDK)</a> - Includes the Java Run Environment, plus tools for developing, debugging, and monitoring Java applications.</li>
-				<li><a href="https://eclipse.org/downloads/eclipse-packages/" target="_blank">Eclipse IDE (for Java Developers)</a> - The development environment we will be using in this tutorial. If you're using another IDE, you'll most probably have to configure things differently.</li><li><a href="http://files.minecraftforge.net/" target="_blank">Minecraft Forge MDK</a> - Development kit that contains the modding API, Minecraft source code and other resources. Choose the recommended version.</li>
+				<li><a href="https://eclipse.org/downloads/eclipse-packages/" target="_blank">Eclipse IDE (for Java Developers)</a> - The development environment we will be using in this tutorial. If you're using another IDE, you're on your own.</li>
+				<li><a href="http://files.minecraftforge.net/" target="_blank">Minecraft Forge MDK</a> - Development kit that contains the modding API, Minecraft source code and other resources. Choose the recommended version.</li>
 			</ul>
 			<p>
-				First off, you should create a new folder where all your mod development files will be located, you can call it something descriptive like "MinecraftModDev". Inside that folder create a subfolder called&nbsp; "Installation Files" and move all the files
-				you've downloaded (JDK, Eclipse and Forge) here. The reason we are creating this subfolder is to have an offline backup of these files in case you need to repeat this whole process from scratch.
+				First off, create a new folder where all your mod development files will be located, you can call it something descriptive like "MinecraftModDev". Inside that folder create a subfolder called "Installation Files" and move all the files you've downloaded (JDK, Eclipse and Forge) here. The reason we are creating this subfolder is to have an offline backup of these files in case you need to repeat this whole process from scratch.
 			</p>
 			<p>
-				Now, onto the first point of the list, installing the JDK which should be a fairly simple job (remember to write down the installation path). After the installation is complete we need to set the <code>JAVA_HOME</code> variable to the installation
-				path of our JDK. This will let Forge (and other applications) know where our Java is located. Read this simple <a href="http://www.robertsindall.co.uk/blog/setting-java-home-variable-in-windows/" target="_blank">how-to</a> for instructions.
+				Now, onto the first list entry - installing the JDK. This should be fairly simple. After the installation is complete we need to set the <code>JAVA_HOME</code> variable to the installation path of our JDK. This will let Forge (and many other applications) know where Java is located. Read this simple <a href="http://www.robertsindall.co.uk/blog/setting-java-home-variable-in-windows/" target="_blank">how-to</a> article for instructions.
 			</p>
 			<p>
 				<b>Note:</b> you might need to restart your computer to finalize this step.
 			</p>
 			<p>
-				Second step is to locate the Eclipse package you downloaded (make sure you downloaded an offline installation package for Java Developers). From the link I provided you the package should be a zip file containing the full program without the need for
-				installation. Just extract the zip file and move the extracted folder wherever you see fit. Since the program is not installed in Windows registry, a useful thing to do would be to create a shortcut of the program and maybe even pin it to
-				Start Menu for ease of access, however you don't have to do this.
+				Next, locate the Eclipse package you downloaded (make sure it's an offline installation package for Java Developers). From the link I provided, the package should be a zip file containing the full program without the need for installation. Just extract the zip file and move the extracted folder wherever you see fit. Since the program is not installed in Windows registry, a useful thing to do would be to create a shortcut of the program and maybe even pin it to Start Menu for ease of access, however you don't have to do this.
 			</p>
 			<h2 id="setting_up_forge">Setting up Forge</h2>
 			<hr/>
@@ -88,15 +85,11 @@
 			<h2 id="about_github">About GitHub</h2>
 			<hr/>
 			<p>
-				What is GitHub? GitHub is a web-based public hosting service for Git repositories. Now what is Git you might be asking yourselves. Git is the most popular version control system used for software development. Version control System (VCS) is most simply put, management of changes to documents. They are commonly used by word processors (e.g Microsoft Word) and spreadsheet software (e.g. Microsoft Excel) as well as most bigger collaborative projects today.
+				What is GitHub? It's is a web-based public hosting service for Git repositories. Now what is Git you might be asking yourselves. Git is the most popular version control system used for software development. Version control System (VCS) is most simply put, management of changes to documents. They are commonly used by word processors (e.g Microsoft Word) and spreadsheet software (e.g. Microsoft Excel) as well as most bigger collaborative projects today.
 			</p>
 			<p>
-				Every time you make any changes (however small they might be) to your project, you are given an option to create a new version of your project, a version that contains those new changes. That version is stored in your repository both offline and online
-				so all members of your development team always have a secure backup of the whole project. In addition to this, you are able to view the changes made in each revision in detail as well as revert your active code to an earlier project version.
-				Not to mention such features as branching, stashing, forking and pull requests which are immensely useful. If you've been an active developer for some time and have never heard about this concept then this will change they way you look at
-				code forever. Here are some good reasons why you should use
-				<a href="https://www.git-tower.com/learn/git/ebook/en/mac/basics/why-use-version-control" target="_blank"> 
-				version control system</a> in your development environment.
+				Every time you make any changes (however small they might be) to your project, you are given an option to create a new version of your project, a version that contains those new changes. That version is stored in your repository both offline and online so all members of your development team always have a secure backup of the whole project. In addition to this, you are able to view the changes made in each revision in detail as well as revert your active code to an earlier project version. Not to mention such features as branching, stashing, forking and pull requests which are immensely useful. If you've been an active developer for some time and have never heard about this concept then this will change your world forever. Here are some good reasons why you should use
+				<a href="https://www.git-tower.com/learn/git/ebook/en/mac/basics/why-use-version-control" target="_blank"> version control system</a>.
 			</p>
 			<div class="note">
 				<div class="header">Note</div>
@@ -113,16 +106,13 @@
 				To set up your project in a repository, visit GitHub and create a free your account. Next thing you have to do is download and install a Git GUI client. The most simple and user-friendly client I know of is <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> (for Windows 7 or later) so I would recommend going with that. If you're interested in something more advanced you can take a look at the official GUI client list linked in the last section of the article.
 			</p>
 			<p>
-				For the purpose of this guide I've decided to create a new <b>generic mod</b> (the name was borrowed from an old tutorial mod used in minecraftforge.net tutorials made by Havvy) and hosted it in a <a href="https://github.com/yooksi/Generic-Mod" target="_blank">repository</a> on GitHub. What I want you to do now is visit that repository and clone (create a local copy) it to your computer using GitHub Desktop you installed earlier. I usually keep all my repositories in <code>Documents\GitHub</code>, but you can store yours wherever you want. If you are not sure how to do, that don't worry, you can watch the instructional GIFs linked in the end of the article.
+				For the purpose of this guide I've created a very simplistic mod repository on GitHub called <a href="https://github.com/yooksi/Generic-Mod" target="_blank">Generic-Mod</a>. The name was borrowed from an old tutorial mod used in minecraftforge.net tutorials made by Havvy. What I want you to do now is visit that repository and clone (create a local copy) it to your computer using GitHub Desktop you installed earlier. I usually keep all my repositories in <code>Documents\GitHub</code>, but you can store yours wherever you want. If you are not sure how to do, that don't worry, you can watch the instructional GIFs linked in the end of the article.
 			</p>
 			<h2 id="project_dependencies">Project Dependencies</h2>
 			<hr/>
 			<p>
 				One more thing we need to do before we can import the generic mod project in our Eclipse workspace. The following steps will explain how to do an independent mod setup. For this setup we only need Forge for it's two meta files, after that we can freely
-				delete it. There are three files that we need to move to your mod root folder. The first file is called <code>.classpath</code>. Eclipse uses this "meta"file to locate all project external dependencies, which are basically all
-				Minecraft and Forge classes you are going to be interacting with. Without them your mod is completely blind. The second file is called <code>.project</code>, which is used by Eclipse as a project description file that describes that project.
-				The third and last file is called <code>build.gradle</code>, which is essentially a set of instructions for building a gradle project. Now, go to your Forge root folder, copy the those three files and paste them in your mod root file. Now
-				open the build.gradle file with your favourite text editor (I use <a href="https://notepad-plus-plus.org/">Notepad++</a> because it's just awesome) and edit the following lines to look like this:
+				delete it. There are three files that we need to move to your mod root folder. The first file is called <code>.classpath</code>. Eclipse uses this "meta"file to locate all project external dependencies, which are basically all Minecraft and Forge classes you are going to be interacting with. Without them your mod is completely blind. The second file is called <code>.project</code>, which is used by Eclipse as a project description file that describes that project. The third and last file is called <code>build.gradle</code>, which is essentially a set of instructions for building a gradle project. Now, go to your Forge root folder, copy the those three files and paste them in your mod root file. Now open the gradle file with your favourite text editor (I use <a href="https://notepad-plus-plus.org/">Notepad++</a> because it's just awesome) and edit the following lines to look like this:
 			</p>
 			<p class="code-block">
 				<span class="var">version</span> = <span class="value">"1.0.0"</span><br />
@@ -130,10 +120,7 @@
 				<span class="var">archivesBaseName</span> = <span class="value">"genericmod"</span>
 			</p>
 			<p>
-				Now we're all set to import the mod with Eclipse. Fire up your Eclipse IDE and import a new gradle project <code>File → Import → Gradle - Gradle Project</code>, then click Next. Enter your project root directory as the root directory of your
-				mod (where your mod project is located on your hard drive), click through Next until the end, then click Finish. Eclipse will then start synchronizing our gradle build with workspace and ask you if you want to "Overwrite existing Eclipse project
-				descriptors", always choose overwrite here. In case your JRE System Library is not set to the latest version of Java SE you're using (that would be "JavaSE-1.8" in my case), make sure to edit the Java <b>build path</b> by right-clicking on
-				your project in package explorer and navigate to <code>Build Path → Configure Build Path</code> and edit the execution environment of the mentioned system library under "Libraries" tab. Congratulations, you've just successfully set up your
+				Now we're all set to import the mod with Eclipse. Fire up your Eclipse IDE and import a new gradle project <code class="path">File → Import → Gradle - Gradle Project</code>, then click Next. Enter your project root directory as the root directory of your mod (where your mod project is located on your hard drive), click through Next until the end, then click Finish. Eclipse will then start synchronizing the gradle build with workspace and ask if you want to overwrite existing project descriptors, choose <b>overwrite</b>. In case your JRE System Library is not set to the latest version of Java SE you're using (that would be "JavaSE-1.8" in my case), make sure to edit the Java build path by right-clicking on your project in package explorer and navigate to <code class="path">Build Path → Configure Build Path</code> and edit the execution environment of the mentioned system library under "Libraries" tab. Congratulations, you've just successfully set up your
 				first mod with Forge! If you had problems completing this step you can watch the instructional GIFs linked in the end of the article.
 			</p>
 			<div class="note">
@@ -145,18 +132,14 @@
 			<h2 id="run_configurations">Run Configurations</h2>
 			<hr/>
 			<p>
-				There are two amazing things I didn't know when I just started modding Minecraft. Amazing thing #1: with the use of Gradle we're able to run an instance of a Minecraft client and server directly from Eclipse with both Forge and our mod loaded inside.
-				Amazing thing #2: is that we can actually run Minecraft interactively while watching the source code and the variables during the execution. This allows us to write our code 'on the fly' when trying to correct problems. Without debugging,
-				mod development would be a long and tedious process that only few would have the patience and dedication of doing. Code debugging is unfortunately out of the scope of this article, so feel free to read more about Java debugging with Eclipse
-				<a href="http://www.vogella.com/tutorials/EclipseDebugging/article.html">here</a>. Meanwhile we should concentrate on trying to figure out how to set up run configurations.
+				There are two amazing things I didn't know when I just started modding Minecraft. Amazing thing #1: with the use of Gradle we're able to run an instance of a Minecraft client and server directly from Eclipse with both Forge and our mod loaded inside. Amazing thing #2: we can actually run Minecraft interactively while watching the source code and the variables during the execution. This allows us to write our code 'on the fly' when trying to correct problems. Without debugging, mod development would be a long and tedious process that only few would have the patience and dedication of doing. Code debugging is unfortunately out of the scope of this article, so feel free to read more about 
+				<a href="http://www.vogella.com/tutorials/EclipseDebugging/article.html">Java debugging</a>. Meanwhile we should concentrate on trying to figure out how to set up run configurations.
 			</p>
 			<p>
-				In order to run our mod from Eclipse, we need to create a new run configuration. To do that, right-click your project in the package explorer and navigate to <code>Run As → Run Configurations...</code>, then select "Java Application". Right-click
-				the category and choose New. Name the new configuration something like "Client_Launcher" (make sure it's not "Launch_Client" as Forge uses that name) and enter <code>GradleStart</code> in the Main class field. Click Apply, and after that Run.
-				Eclipse should start booting up the new Minecraft instance and you should be seeing the console log start to fill up.
+				In order to run our mod from Eclipse, we need to create a new run configuration. To do that, right-click your project in the package explorer and navigate to <code class="path">Run As → Run Configurations - Java Application - New</code>. Name the new configuration something like "Client_Launcher" (make sure it's not "Launch_Client" as Forge uses that name) and enter <code>GradleStart</code> in the Main class field. Click Apply, and after that Run. Eclipse should start booting up the new Minecraft instance and you should be seeing the console log start to fill up.
 			</p>
 			<p>
-				If you get an error, please let me know in the comment section and I will try to help to the best of my abilities. Again, if  you had any problems completing this step, or you are more of a visual learner, you can watch the instructional GIFs linked in the end of the article.
+				If you get an error, please let me know in the comment section and I will try to help to the best of my abilities. Again, if  you had any problems completing this step, or you are more <br> a visual learner, you can watch the instructional GIFs linked in the end of the article.
 			</p>
 			<div class="note">
 				<div class="header">Pro Tip</div>
@@ -170,25 +153,21 @@
 				If you followed this article properly you should now be left with a fairly good understanding of how to set up your Minecraft development environment from scratch.
 			</p>
 			<p>
-				One last suggestion; join your fellow developers on the official Minecraft <a href="http://www.minecraftforge.net/forum/">Forge forum</a> and take a look around, there is much to learn from there and the community is very helpful and kind.
+				One last suggestion; join fellow developers on the official Minecraft <a href="http://www.minecraftforge.net/forum/">Forge forum</a> and take a look around, there is much to learn from there and the community is very helpful and kind.
 			</p>
 			<p>
 				Keep in mind that I am not an expert of any kind on this topic, so suggestions and corrections are most welcome. If this article helped you in any way please leave me a comment with your impression, it helps keep me motivated when I see my writing is
 				actually helping people out there. Also don't feel shy to share this article with people you think might benefit from it.
 			</p>
-			<h2>Important Links</h2>
+			<h3>Further Reading</h3>
 			<hr/>
 				<ul>
 					<li><a href="http://imgur.com/a/0EclA">
 					Instructional GIF's on imgur.</a></li>
-					<li><a href="https://github.com/yooksi/Generic-Mod">
-					Generic-Mod repository on GitHub.</a></li>
 					<li><a href="https://yooksidoesminecraft.blogspot.de/2016/10/learning-to-github-for-minecraft-modders.html">
 					Learning to GitHub: For Minecraft Modders.</a></li>
 					<li><a href="https://desktop.github.com/">
-					Official GitHub Desktop client.</a></li>
-					<li><a href="https://www.git-tower.com/learn/git/ebook/en/desktop-gui/basics/why-use-version-control">
-					Why Use a Version Control System?</a></li>
+					List of official GitHub Desktop clients.</a></li>
 				</ul>
 			</p>
 	    </div>
